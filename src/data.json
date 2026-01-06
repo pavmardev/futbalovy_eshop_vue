@@ -1,0 +1,242 @@
+{
+  "navigation": [
+    { "name": "Domov", "path": "/" },
+    { "name": "Produkty", "path": "/products" },
+    { "name": "Kontakt", "path": "/contact" },
+    { "name": "O nás", "path": "/about" }
+  ],
+  "products": {
+    "kopacky": [
+      {
+        "id": 1,
+        "name": "Kopačky Predator",
+        "price": 120,
+        "image": "images/kopacky1.png",
+        "description": "Moderné kopačky s výbornou trakciou.",
+        "specs": { "size": [40,41,42,43], "material": "synthetic" }
+      },
+      {
+        "id": 2,
+        "name": "Kopačky Mercurial",
+        "price": 150,
+        "image": "images/kopacky2.png",
+        "description": "Ľahké kopačky pre rýchly pohyb na ihrisku.",
+        "specs": { "size": [39,40,41,42], "material": "synthetic" }
+      },
+      {
+        "id": 3,
+        "name": "Kopačky Phantom",
+        "price": 130,
+        "image": "images/kopacky3.png",
+        "description": "Kopačky s perfektnou kontrolou lopty.",
+        "specs": { "size": [40,41,42,43,44], "material": "synthetic" }
+      },
+      {
+        "id": 4,
+        "name": "Kopačky Tiempo",
+        "price": 140,
+        "image": "images/kopacky4.png",
+        "description": "Kopačky vhodné na prírodné i umelé ihriská.",
+        "specs": { "size": [39,40,41,42,43], "material": "leather" }
+      },
+      {
+        "id": 5,
+        "name": "Kopačky Ultra",
+        "price": 160,
+        "image": "images/kopacky5.png",
+        "description": "Extrémne ľahké a pohodlné kopačky.",
+        "specs": { "size": [41,42,43,44], "material": "synthetic" }
+      },
+      {
+        "id": 6,
+        "name": "Kopačky Superfly",
+        "price": 155,
+        "image": "images/kopacky6.png",
+        "description": "Kopačky pre profesionálnych hráčov.",
+        "specs": { "size": [40,41,42,43], "material": "synthetic" }
+      },
+      {
+        "id": 7,
+        "name": "Kopačky Vision",
+        "price": 125,
+        "image": "images/kopacky7.png",
+        "description": "Kopačky s výbornou stabilitou pri zmene smeru.",
+        "specs": { "size": [39,40,41,42,43], "material": "synthetic" }
+      }
+    ],
+    "lopty": [
+      {
+        "id": 101,
+        "name": "Lopta Premier League",
+        "price": 50,
+        "image": "images/lopty1.jpg",
+        "description": "Oficiálna lopta Premier League.",
+        "specs": { "size": 5, "material": "PU" }
+      },
+      {
+        "id": 102,
+        "name": "Lopta Champions League",
+        "price": 55,
+        "image": "images/lopty2.jpg",
+        "description": "Oficiálna lopta UEFA Champions League.",
+        "specs": { "size": 5, "material": "PU" }
+      },
+      {
+        "id": 103,
+        "name": "Lopta Street",
+        "price": 30,
+        "image": "images/lopty3.jpg",
+        "description": "Odolná lopta na ulicu a tréning.",
+        "specs": { "size": 5, "material": "rubber" }
+      },
+      {
+        "id": 104,
+        "name": "Lopta Training Pro",
+        "price": 35,
+        "image": "images/lopty4.jpg",
+        "description": "Lopta vhodná na tréningy a školenia.",
+        "specs": { "size": 5, "material": "PU" }
+      },
+      {
+        "id": 105,
+        "name": "Lopta Match Ball",
+        "price": 60,
+        "image": "images/lopty5.jpg",
+        "description": "Kvalitná zápasová lopta.",
+        "specs": { "size": 5, "material": "PU" }
+      },
+      {
+        "id": 106,
+        "name": "Lopta Mini",
+        "price": 20,
+        "image": "images/lopty6.jpg",
+        "description": "Mini lopta pre deti a voľný čas.",
+        "specs": { "size": 3, "material": "PU" }
+      },
+      {
+        "id": 107,
+        "name": "Lopta Indoor",
+        "price": 40,
+        "image": "images/lopty7.jpg",
+        "description": "Lopta určená na halový futbal.",
+        "specs": { "size": 5, "material": "synthetic" }
+      }
+    ],
+    "dresy": [
+      {
+        "id": 201,
+        "name": "Dres FC Barcelona",
+        "price": 70,
+        "image": "images/dresy1.jpg",
+        "description": "Oficiálny domáci dres FC Barcelona.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 202,
+        "name": "Dres Real Madrid",
+        "price": 70,
+        "image": "images/dresy2.jpg",
+        "description": "Oficiálny domáci dres Real Madrid.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 203,
+        "name": "Dres Manchester United",
+        "price": 65,
+        "image": "images/dresy3.jpg",
+        "description": "Kvalitný replika dresu Manchester United.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 204,
+        "name": "Dres Bayern Mníchov",
+        "price": 68,
+        "image": "images/dresy4.jpg",
+        "description": "Oficiálny domáci dres Bayern Mníchov.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 205,
+        "name": "Dres Liverpool FC",
+        "price": 67,
+        "image": "images/dresy5.jpg",
+        "description": "Kvalitný replika dresu Liverpool FC.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 206,
+        "name": "Dres Juventus",
+        "price": 69,
+        "image": "images/dresy6.jpg",
+        "description": "Oficiálny replika dresu Juventus.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      },
+      {
+        "id": 207,
+        "name": "Dres PSG",
+        "price": 72,
+        "image": "images/dresy7.jpg",
+        "description": "Oficiálny replika dresu PSG.",
+        "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
+      }
+    ],
+    "vybavenie": [
+      {
+        "id": 301,
+        "name": "Chrániče holení",
+        "price": 25,
+        "image": "images/vybavenie1.jpg",
+        "description": "Odolné chrániče holení pre každý zápas.",
+        "specs": { "size": ["S","M","L"] }
+      },
+      {
+        "id": 302,
+        "name": "Brankárske rukavice",
+        "price": 40,
+        "image": "images/vybavenie2.jpg",
+        "description": "Rukavice s dobrou priľnavosťou.",
+        "specs": { "size": ["7","8","9","10","11"] }
+      },
+      {
+        "id": 303,
+        "name": "Futbalová taška",
+        "price": 35,
+        "image": "images/vybavenie3.jpg",
+        "description": "Taška na výstroj, loptu a oblečenie.",
+        "specs": { "capacity": "40L" }
+      },
+      {
+        "id": 304,
+        "name": "Športová fľaša",
+        "price": 10,
+        "image": "images/vybavenie4.jpg",
+        "description": "Fľaša na pitie s praktickým uzáverom.",
+        "specs": { "capacity": "750ml" }
+      },
+      {
+        "id": 305,
+        "name": "Tréningový kužeľ",
+        "price": 12,
+        "image": "images/vybavenie5.jpg",
+        "description": "Kužeľ na tréningové drilly.",
+        "specs": { "height": "23cm" }
+      },
+      {
+        "id": 306,
+        "name": "Svetelná páska na ihrisko",
+        "price": 15,
+        "image": "images/vybavenie6.jpg",
+        "description": "Páska na označenie hraníc ihriska.",
+        "specs": { "length": "10m" }
+      },
+      {
+        "id": 307,
+        "name": "Futbalové štulpne",
+        "price": 12,
+        "image": "images/vybavenie7.jpg",
+        "description": "Štulpne vhodné na zápasy aj tréningy.",
+        "specs": { "size": ["S","M","L"] }
+      }
+    ]
+  }
+}
