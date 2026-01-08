@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsView from '@/views/ProductsView.vue'
 import ProductItemView from '@/views/ProductItemView.vue'
+import ProductFilter from '@/views/ProductFilter.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,19 @@ const router = createRouter({
       }
       ]
     },
+    {
+      path: '/filter/:category',
+      name: 'productFilter',
+      component: ProductFilter,
+      props: true,
+      children: [{
+        path: ':itemId',
+        name: 'productItem',
+        component: ProductItemView,
+        props: true
+      }
+      ]
+    }
   ],
 })
 

@@ -23,18 +23,20 @@ export default defineComponent({
 })
 </script>
 <template>
-    <div v-if="object">
+    <div class="product-view" v-if="object">
         <img :src="'/' + object.image" alt="Obrázok produktu">
         <h3>{{ object.name }}</h3>
         <p>{{ object.price + ' €' }}</p>
         <p>
             <strong>Popis: </strong>{{ object.description }}
         </p>
-        <p>Veľkosti:</p>
-        <ul v-for="s in object.specs.size">
-            <li>{{ s }}</li>
-        </ul>
-
+        <p>Materiál: {{ object.specs.material }}</p>
+        <p>Veľkosti: </p>
+        <form>
+            <select name="sizes">
+                <option v-for="s in object.specs.size" :value="s">{{s}}</option>
+            </select>
+        </form>
     </div>
 </template>
 
@@ -43,13 +45,12 @@ export default defineComponent({
         font-weight: 600;
         text-align: center;
     }
-    div {
+    .product-view {
         width: 60%;
         margin: auto;
-        box-shadow: 8px 8px 15px gray;
         margin-bottom: 3%;
         border-radius: 10px;
-        border: 2px 2px solid rgb(83, 83, 83);
+        border: 2px solid rgb(83, 83, 83);
         padding: 2%;
         transition: all 0.2s;
     }
@@ -61,11 +62,18 @@ export default defineComponent({
         margin-right: auto;
         height: auto;
     }
-    p,ul {
+    p,ul,select {
         font-size: 70%;
     }
-    div:hover {
-        width: 65%;
+    p:last-of-type {
+        display: inline;
+    }
+    form {
+        display: inline;
+        vertical-align: top;
+    }
+    .product-view:hover {
+        box-shadow: 8px 8px 15px gray;
         cursor: pointer;
     }
 </style>

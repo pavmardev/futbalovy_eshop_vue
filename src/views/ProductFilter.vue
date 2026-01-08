@@ -4,50 +4,42 @@ import ProductItemView from './ProductItemView.vue';
 import data from '../data.json'
 
 export default defineComponent({
-    name: 'Products',
-    components: {
-        ProductItemView
-    },
+    name: 'ProductFilter',
+    components: ProductItemView,
     data() {
         return {
-            products: Object.values(data.products).flat(),
+            cat: Object.entries(data.products).map(([key, value]) => ({key, value}))
+        }
+    },
+    props: {
+        category: {
+            type: String,
+            required: true
+        }
+    },
+    computed: {
+        objectFind() {
+            return this.cat[Number(this.category)]
         }
     }
 })
-
-
 </script>
 
 <template>
-<img src="/images/products_hero.jpg">
-<h2>Pre malých aj veľkých futbalistov</h2>
-<h4>Vyber si výbavu, na ktorú sa môžeš spoľahnúť</h4>
 <RouterView />
-<div class="products">
-    <div v-for="product in products" :key="product.id">
+<div v-if="objectFind" class="products">
+    <div v-for="product in objectFind.value" :id="product.id">
         <RouterLink :to="{name: 'productItem',params:{itemId: product.id}}" :key="product.id" class="product-link">
-            <img :src="product.image" alt="Obrázok produktu">
+            <img :src="'/' + product.image" alt="Obrázok produktu">
             <p class="product-name">{{ product.name }}</p>
             <p class="product-price">{{ product.price + ' €'}}</p>
         </RouterLink>
     </div>
 </div>
+    
 </template>
 
-<style scoped>
-img {
-    display: block;
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-h2, h4 {
-    text-align: center;
-}
-h4 {
-    margin-bottom: 3%;
-}
+<style>
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,18 +54,7 @@ h4 {
     transition: all 0.2s;
     min-width: 0;
 }
-.product-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-    box-sizing: border-box;
-}
-.product-link > img {
+img {
     width: 100%;
     height: auto;
     max-height: 60%;
@@ -92,6 +73,17 @@ h4 {
     font-size: 55%;
     text-align: center;
     margin: 0;
+}
+.product-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
 }
 .products > div:hover {
     background-color: rgb(2, 147, 2);
