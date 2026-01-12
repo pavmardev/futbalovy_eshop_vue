@@ -31,7 +31,7 @@ const router = createRouter({
       props: true,
       children: [{
         path: ':itemId',
-        name: 'productItem',
+        name: 'productFilterItem',
         component: ProductItemView,
         props: true
       }

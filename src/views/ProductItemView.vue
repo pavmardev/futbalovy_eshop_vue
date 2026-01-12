@@ -1,8 +1,13 @@
 <script>
 import { defineComponent } from 'vue';
 import data from '../data.json'
+import Button from '@/components/Button.vue';
 
 export default defineComponent({
+    name: 'ProductItemView',
+    components: {
+        Button
+    },
     data() {
         return {
             products: Object.values(data.products),
@@ -12,6 +17,11 @@ export default defineComponent({
         itemId: {
             type: String,
             required: true
+        }
+    },
+    methods: {
+        isArray(spec) {
+            return Array.isArray(spec)
         }
     },
     computed: {
@@ -26,17 +36,20 @@ export default defineComponent({
     <div class="product-view" v-if="object">
         <img :src="'/' + object.image" alt="Obrázok produktu">
         <h3>{{ object.name }}</h3>
-        <p>{{ object.price + ' €' }}</p>
+        <p>{{ object.price + ' €' }}</p><br>
         <p>
             <strong>Popis: </strong>{{ object.description }}
         </p>
-        <p>Materiál: {{ object.specs.material }}</p>
-        <p>Veľkosti: </p>
-        <form>
-            <select name="sizes">
-                <option v-for="s in object.specs.size" :value="s">{{s}}</option>
-            </select>
-        </form>
+        <div v-for="(spec, name) in object.specs">
+            <p class="strong">{{ name }}: </p>
+            <form v-if="isArray(spec)">
+                <select name="sel">
+                    <option v-for="val in spec" :value="val">{{ val }}</option>
+                </select>
+            </form>
+            <p v-else>{{ spec }}</p>
+        </div>
+        <Button :text="'Pridať do košíka'"></Button>
     </div>
 </template>
 
@@ -65,8 +78,11 @@ export default defineComponent({
     p,ul,select {
         font-size: 70%;
     }
-    p:last-of-type {
+    p {
         display: inline;
+    }
+    .strong {
+        font-weight: 600;
     }
     form {
         display: inline;

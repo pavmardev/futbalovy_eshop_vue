@@ -73,17 +73,17 @@
     "lopty": [
       {
         "id": 101,
-        "name": "Lopta Premier League",
+        "name": "Lopta Premier",
         "price": 50,
-        "image": "images/lopty1.png",
+        "image": "images/lopty1.jpg",
         "description": "Oficiálna lopta Premier League.",
         "specs": { "size": 5, "material": "PU" }
       },
       {
         "id": 102,
-        "name": "Lopta Champions League",
+        "name": "Lopta Champions",
         "price": 55,
-        "image": "images/lopty2.png",
+        "image": "images/lopty2.jpg",
         "description": "Oficiálna lopta UEFA Champions League.",
         "specs": { "size": 5, "material": "PU" }
       },
@@ -91,7 +91,7 @@
         "id": 103,
         "name": "Lopta Street",
         "price": 30,
-        "image": "images/lopty3.png",
+        "image": "images/lopty3.jpg",
         "description": "Odolná lopta na ulicu a tréning.",
         "specs": { "size": 5, "material": "rubber" }
       },
@@ -99,7 +99,7 @@
         "id": 104,
         "name": "Lopta Training Pro",
         "price": 35,
-        "image": "images/lopty4.png",
+        "image": "images/lopty4.jpg",
         "description": "Lopta vhodná na tréningy a školenia.",
         "specs": { "size": 5, "material": "PU" }
       },
@@ -107,7 +107,7 @@
         "id": 105,
         "name": "Lopta Match Ball",
         "price": 60,
-        "image": "images/lopty5.png",
+        "image": "images/lopty5.jpg",
         "description": "Kvalitná zápasová lopta.",
         "specs": { "size": 5, "material": "PU" }
       },
@@ -115,7 +115,7 @@
         "id": 106,
         "name": "Lopta Mini",
         "price": 20,
-        "image": "images/lopty6.png",
+        "image": "images/lopty6.jpg",
         "description": "Mini lopta pre deti a voľný čas.",
         "specs": { "size": 3, "material": "PU" }
       },
@@ -123,7 +123,7 @@
         "id": 107,
         "name": "Lopta Indoor",
         "price": 40,
-        "image": "images/lopty7.png",
+        "image": "images/lopty7.jpg",
         "description": "Lopta určená na halový futbal.",
         "specs": { "size": 5, "material": "synthetic" }
       }
@@ -131,58 +131,58 @@
     "dresy": [
       {
         "id": 201,
-        "name": "Dres FC Barcelona",
+        "name": "Dres FC Barcalona",
         "price": 70,
-        "image": "images/dresy1.png",
-        "description": "Oficiálny domáci dres FC Barcelona.",
+        "image": "images/dresy1.jpg",
+        "description": "Oficiálny domáci dres FC Barcalona.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 202,
-        "name": "Dres Real Madrid",
+        "name": "Dres Real",
         "price": 70,
-        "image": "images/dresy2.png",
-        "description": "Oficiálny domáci dres Real Madrid.",
+        "image": "images/dresy2.jpg",
+        "description": "Oficiálny domáci dres Real.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 203,
-        "name": "Dres Chelsea",
+        "name": "Dres Chalsea",
         "price": 65,
-        "image": "images/dresy3.png",
-        "description": "Kvalitná replika dresu Chelsea.",
+        "image": "images/dresy3.jpg",
+        "description": "Kvalitná replika dresu Chalsea.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 204,
-        "name": "Dres Borussia Dortmund",
+        "name": "Dres Borusia",
         "price": 68,
-        "image": "images/dresy4.png",
-        "description": "Oficiálny domáci dres Borussia Dortmund.",
+        "image": "images/dresy4.jpg",
+        "description": "Oficiálny domáci dres Borusia.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 205,
-        "name": "Dres Liverpool FC",
+        "name": "Dres Liverpol FC",
         "price": 67,
-        "image": "images/dresy5.png",
-        "description": "Kvalitný replika dresu Liverpool FC.",
+        "image": "images/dresy5.jpg",
+        "description": "Kvalitný replika dresu Liverpol FC.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 206,
-        "name": "Dres Juventus",
+        "name": "Dres Juve",
         "price": 69,
-        "image": "images/dresy6.png",
-        "description": "Oficiálny replika dresu Juventus.",
+        "image": "images/dresy6.jpg",
+        "description": "Oficiálny replika dresu Juve.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       },
       {
         "id": 207,
-        "name": "Dres PSG",
+        "name": "Dres Paris",
         "price": 72,
-        "image": "images/dresy7.png",
-        "description": "Oficiálny replika dresu PSG.",
+        "image": "images/dresy7.jpg",
+        "description": "Oficiálny replika dresu Paris.",
         "specs": { "size": ["S","M","L","XL"], "material": "polyester" }
       }
     ],
@@ -191,7 +191,7 @@
         "id": 301,
         "name": "Chrániče holení",
         "price": 25,
-        "image": "images/vybavenie1.png",
+        "image": "images/vybavenie1.jpg",
         "description": "Odolné chrániče holení pre každý zápas.",
         "specs": { "size": ["S","M","L"] }
       },
@@ -199,7 +199,7 @@
         "id": 302,
         "name": "Brankárske rukavice",
         "price": 40,
-        "image": "images/vybavenie2.png",
+        "image": "images/vybavenie2.jpg",
         "description": "Rukavice s dobrou priľnavosťou.",
         "specs": { "size": ["7","8","9","10","11"] }
       },
@@ -207,7 +207,7 @@
         "id": 303,
         "name": "Futbalová taška",
         "price": 35,
-        "image": "images/vybavenie3.png",
+        "image": "images/vybavenie3.jpg",
         "description": "Taška na výstroj, loptu a oblečenie.",
         "specs": { "capacity": "40L" }
       },
@@ -215,7 +215,7 @@
         "id": 304,
         "name": "Športová fľaša",
         "price": 10,
-        "image": "images/vybavenie4.png",
+        "image": "images/vybavenie4.jpg",
         "description": "Fľaša na pitie s praktickým uzáverom.",
         "specs": { "capacity": "750ml" }
       },
@@ -223,7 +223,7 @@
         "id": 305,
         "name": "Tréningový kužeľ",
         "price": 12,
-        "image": "images/vybavenie5.png",
+        "image": "images/vybavenie5.jpg",
         "description": "Kužeľ na tréningové drilly.",
         "specs": { "height": "23cm" }
       },
@@ -231,7 +231,7 @@
         "id": 306,
         "name": "Svetelná páska na ihrisko",
         "price": 15,
-        "image": "images/vybavenie6.png",
+        "image": "images/vybavenie6.jpg",
         "description": "Páska na označenie hraníc ihriska.",
         "specs": { "length": "10m" }
       },
@@ -239,7 +239,7 @@
         "id": 307,
         "name": "Futbalové štulpne",
         "price": 12,
-        "image": "images/vybavenie7.png",
+        "image": "images/vybavenie7.jpg",
         "description": "Štulpne vhodné na zápasy aj tréningy.",
         "specs": { "size": ["S","M","L"] }
       }

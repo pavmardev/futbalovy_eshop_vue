@@ -5,7 +5,9 @@ import data from '../data.json'
 
 export default defineComponent({
     name: 'ProductFilter',
-    components: ProductItemView,
+    components: {
+        ProductItemView
+    },
     data() {
         return {
             cat: Object.entries(data.products).map(([key, value]) => ({key, value}))
@@ -29,7 +31,7 @@ export default defineComponent({
 <RouterView />
 <div v-if="objectFind" class="products">
     <div v-for="product in objectFind.value" :id="product.id">
-        <RouterLink :to="{name: 'productItem',params:{itemId: product.id}}" :key="product.id" class="product-link">
+        <RouterLink :to="{name: 'productFilterItem',params:{itemId: product.id}}" :key="product.id" class="product-link">
             <img :src="'/' + product.image" alt="Obrázok produktu">
             <p class="product-name">{{ product.name }}</p>
             <p class="product-price">{{ product.price + ' €'}}</p>
@@ -39,7 +41,7 @@ export default defineComponent({
     
 </template>
 
-<style>
+<style scoped>
 .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -83,7 +83,7 @@ h4 {
     border-radius: 5px;
 }
 .product-name {
-    font-size: 60%;
+    font-size: 55%;
     font-weight: 500;
     text-align: center;
     margin: 2px 0 0 0;
