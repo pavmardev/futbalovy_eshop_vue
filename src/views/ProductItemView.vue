@@ -2,6 +2,7 @@
 import { defineComponent } from 'vue';
 import data from '../data.json'
 import Button from '@/components/Button.vue';
+import { useCartStore } from '@/stores/cart';
 
 export default defineComponent({
     name: 'ProductItemView',
@@ -11,6 +12,11 @@ export default defineComponent({
     data() {
         return {
             products: Object.values(data.products),
+            message: null,
+            value: null,
+            product: null,
+            amount: '1',
+            cartList: useCartStore()
         }
     },
     props: {
@@ -22,12 +28,42 @@ export default defineComponent({
     methods: {
         isArray(spec) {
             return Array.isArray(spec)
+        },
+        clicked(payload) {
+            this.message = payload
+            const hasSelect = Object.values(this.object.specs).some(spec => Array.isArray(spec))
+            console.log(hasSelect)
+            if (this.value === null && hasSelect) {
+                window.alert('Neboli zvolené špecifikácie produktu')
+            } 
+            else if (this.value != null && hasSelect) {
+                this.product = {id: this.object.id, 
+                                name: this.object.name, 
+                                price: this.object.price, 
+                                image: this.object.image, 
+                                description: this. object.description, 
+                                specs: {size:this.value},
+                                amount: this.amount}
+            }
+            else if (hasSelect != true) {
+                this.product = {...this.object, amount:this.amount}
+            }
+            
+            console.log(this.product)
         }
     },
     computed: {
         object() {
             return this.products.flat().find(
             item => item.id === Number(this.itemId))
+        }
+    },
+    watch: {
+        product() {
+            this.value = null
+            this.amount = '1'
+            this.cartList.addProduct(this.product)
+            console.log(sessionStorage)
         }
     }
 })
@@ -42,14 +78,16 @@ export default defineComponent({
         </p>
         <div v-for="(spec, name) in object.specs">
             <p class="strong">{{ name }}: </p>
-            <form v-if="isArray(spec)">
-                <select name="sel">
+                <select name="sel" v-if="isArray(spec)" v-model="value">
                     <option v-for="val in spec" :value="val">{{ val }}</option>
                 </select>
-            </form>
-            <p v-else>{{ spec }}</p>
+            <p v-else>{{ spec }}</p><br>
         </div>
-        <Button :text="'Pridať do košíka'"></Button>
+        <p>Počet kusov: </p>
+        <select name="sel" v-model="amount">
+            <option v-for="amount in 10" :value="amount">{{ amount }}</option>
+        </select><br>
+        <Button :text="'Pridať do košíka'" @clicked="clicked"></Button>
     </div>
 </template>
 
@@ -83,10 +121,6 @@ export default defineComponent({
     }
     .strong {
         font-weight: 600;
-    }
-    form {
-        display: inline;
-        vertical-align: top;
     }
     .product-view:hover {
         box-shadow: 8px 8px 15px gray;

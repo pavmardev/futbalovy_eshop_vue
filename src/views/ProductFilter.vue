@@ -17,6 +17,10 @@ export default defineComponent({
         category: {
             type: String,
             required: true
+        },
+        itemId: {
+            type: String,
+            required: false
         }
     },
     computed: {

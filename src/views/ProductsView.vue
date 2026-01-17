@@ -11,6 +11,13 @@ export default defineComponent({
     data() {
         return {
             products: Object.values(data.products).flat(),
+            filter: ["Kopačky", "Lopty", "Dresy", "Vybavenie"],
+            cat: '0'
+        }
+    },
+    methods: {
+        confirm() {
+            return true
         }
     }
 })
@@ -19,9 +26,20 @@ export default defineComponent({
 </script>
 
 <template>
-<img src="/images/products_hero.jpg">
-<h2>Pre malých aj veľkých futbalistov</h2>
+<div class="hero">
+    <img src="/images/products_hero.jpg">
+    <h2>Pre malých aj veľkých futbalistov</h2>
+</div>
 <h4>Vyber si výbavu, na ktorú sa môžeš spoľahnúť</h4>
+<details>
+    <summary>Filtrovať</summary>
+    <select v-model="cat" name="products">
+        <option v-for="(n, index) in filter " :key="index" :value="index">{{ n }}</option>
+    </select><br>
+    <RouterLink :to="{name: 'productFilter', params: {category: cat}}" class="anchor">
+        Potvrdiť
+    </RouterLink>
+</details>
 <RouterView />
 <div class="products">
     <div v-for="product in products" :key="product.id">
@@ -35,6 +53,33 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.hero {
+    position: relative;
+}
+.hero h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 2px 5px black;
+    margin: 0;
+}
+details {
+    position: relative;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2%;
+    padding: 1%;
+    background-color: rgb(245, 245, 177);
+}
+.anchor {
+    font-size: 40%;
+}
+select {
+    font-size: 60%;
+}
 img {
     display: block;
     width: 100vw;

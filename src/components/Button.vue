@@ -6,23 +6,29 @@ export default defineComponent({
     data() {
         return {
             message: this.text,
-            class: null
+            class: null,
+            product: this.productId
         }
     }, 
     props: {
         text: {
             type: String,
             required: true
+        },
+        productId: {
+            type: Number,
+            required: false
         }
     },
     methods: {
         updateCart() {
             if (this.class == 'green') {
-                this.$emit('clicked', 'push')
+                this.$emit('clicked', true)
             }
             else {
-                this.$emit('clicked', 'remove')
+                this.$emit('clicked', this.product)
             }
+            
         }
     },
     computed: {
@@ -41,17 +47,17 @@ export default defineComponent({
 </script>
 
 <template>
-<button :class="changeClass" @click="">{{ message }}</button>
+<button :class="changeClass" @click="updateCart" :id="product">{{ message }}</button>
 </template>
 
 <style scoped>
 .green, .red {
     color: white;
-    padding: 4% 10%;
+    padding: 8px 15px;
     border-radius: 4px;
     border: none;
-    margin-left: 20%;
-    font-size: 60%;
+    font-size: 70%;
+    cursor: pointer;
 }
 .green {
     background-color: rgb(2, 147, 2);

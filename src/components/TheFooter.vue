@@ -8,20 +8,11 @@ export default defineComponent({
 <template>
     <footer>
         <div class="main-div">
-            <div>
-                <h3>Obchod</h3>
-                <p>Kopačky</p>
-                <p>Dresy</p>
-                <p>Lopty</p>
-                <p>Vybavenie</p>
-            </div>
-            <div>
-                <h3>Podpora</h3>
-                <p>Kontakt</p>
-                <p>FAQ</p>
-                <p>Reklamácie</p>
-                <p>Informácie o doprave</p>
-            </div>
+            <p>Podpora</p>
+            <p>Kontakt</p>
+            <p>FAQ</p>
+            <p>Reklamácie</p>
+            <p>Doprava</p>
         </div>
     </footer>
 </template>
@@ -29,6 +20,19 @@ export default defineComponent({
 <style scoped>
 .main-div {
     display: grid;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    margin-top: 8%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+    color: white;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 4%;
+}
+p {
+    text-align: center;
 }
 </style>
