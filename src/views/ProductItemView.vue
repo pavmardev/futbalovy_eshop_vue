@@ -18,6 +18,7 @@ export default defineComponent({
       amount: '1',
       snackbar: false,
       cartList: useCartStore(),
+      baseUrl: import.meta.env.BASE_URL,
     }
   },
   props: {
@@ -75,7 +76,7 @@ export default defineComponent({
 </script>
 <template>
   <div class="product-view" v-if="object">
-    <img :src="'/' + object.image" alt="Obrázok produktu" />
+    <img :src="baseUrl + object.image" alt="Obrázok produktu" />
     <h3>{{ object.name }}</h3>
     <p>{{ object.price + ' €' }}</p>
     <br />

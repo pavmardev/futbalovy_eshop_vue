@@ -11,6 +11,7 @@ export default defineComponent({
   data() {
     return {
       cat: Object.entries(data.products).map(([key, value]) => ({ key, value })),
+      baseUrl: import.meta.env.BASE_URL,
     }
   },
   props: {
@@ -40,7 +41,7 @@ export default defineComponent({
         :key="product.id"
         class="product-link"
       >
-        <img :src="'/' + product.image" alt="Obrázok produktu" />
+        <img :src="baseUrl + product.image" alt="Obrázok produktu" />
         <p class="product-name">{{ product.name }}</p>
         <p class="product-price">{{ product.price + ' €' }}</p>
       </RouterLink>
