@@ -29,6 +29,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 50%;
 }
 
 input,

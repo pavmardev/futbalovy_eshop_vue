@@ -16,10 +16,15 @@ export default defineComponent({
       value: null,
       product: null,
       amount: '1',
+      snackbar: false,
       cartList: useCartStore(),
     }
   },
   props: {
+    category: {
+      type: String,
+      required: false,
+    },
     itemId: {
       type: String,
       required: true,
@@ -61,6 +66,7 @@ export default defineComponent({
     product() {
       this.value = null
       this.amount = '1'
+      this.snackbar = true
       this.cartList.addProduct(this.product)
       console.log(sessionStorage)
     },
@@ -88,6 +94,9 @@ export default defineComponent({
     ><br />
     <Button :text="'Pridať do košíka'" @clicked="clicked"></Button>
   </div>
+  <v-snackbar v-model="snackbar" timeout="1000" location="top" color="success">
+    Produkt bol pridaný do košíka
+  </v-snackbar>
 </template>
 
 <style scoped>
@@ -116,6 +125,10 @@ p,
 ul,
 select {
   font-size: 70%;
+}
+select {
+  border: 2px black solid;
+  border-radius: 4px;
 }
 p {
   display: inline;
