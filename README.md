@@ -1,29 +1,60 @@
-# Football eshop
+# Football Eshop
 
-This is a student project of a fictive football eshop website written in Javascript frontend framework Vue.js in Options API.
+This is a student project of a fictitious football e-commerce website built using the Vue.js framework (Options API).
+
+The application simulates an online football store where users can browse products and manage a shopping cart.
+
+---
 
 ## Installation
 
-1. Clone a repository
-   git clone https://github.com/pavmardev/futbalovy_eshop_vue.git <folder_name>
-2. Go to downoladed folder
-3. Install dependecies
+1. Clone the repository:
+   git clone https://github.com/user/futbalov_eshop.git
+
+2. Navigate to the project folder:
+   cd futbalov_eshop
+
+3. Install dependencies:
    npm install
-   
+
+---
 
 ## Usage
 
-1. Go to downloaded folder using terminal
-2. Run command "npm run dev"
-Application will run on "http://localhost:5173/futbalovy_eshop_vue/"
+1. Navigate to the project folder:
+   cd futbalov_eshop
+
+2. Start the development server:
+   npm run dev
+
+3. Open the application in your browser:
+   http://localhost:5173/futbalov_eshop/
+
+---
 
 ## Functionality
 
-1. Filtering products by categories
-2. Choosing amount of products
-3. Adding product to cart
-4. Calculation of total cost
+- Filtering products by categories
+- Selecting product quantity
+- Adding products to the shopping cart
+- Removing products from the cart
+- Automatic total price calculation
+
+---
 
 ## Tech Stack
 
-Vue.js
+- Vue.js (Options API)
+- Vite
+- JavaScript
+- HTML
+- CSS
+- Vuetify
+
+---
+
+## Author
+
+Pavol Marko  
+Student project – 2026
+
