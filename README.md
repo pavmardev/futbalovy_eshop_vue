@@ -9,7 +9,7 @@ The application simulates an online football store where users can browse produc
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/user/futbalov_eshop.git
+   git clone https://github.com/pavmardev/futbalovy_eshop_vue.git
 
 2. Navigate to the project folder:
    cd futbalov_eshop
@@ -22,13 +22,13 @@ The application simulates an online football store where users can browse produc
 ## Usage
 
 1. Navigate to the project folder:
-   cd futbalov_eshop
+   cd futbalovy_eshop_vue
 
 2. Start the development server:
    npm run dev
 
 3. Open the application in your browser:
-   http://localhost:5173/futbalov_eshop/
+   http://localhost:5173/futbalovy_eshop_vue/
 
 ---
 
@@ -39,6 +39,7 @@ The application simulates an online football store where users can browse produc
 - Adding products to the shopping cart
 - Removing products from the cart
 - Automatic total price calculation
+- Saving products to persistent storage in browser **sessionStorage**
 
 ---
 
